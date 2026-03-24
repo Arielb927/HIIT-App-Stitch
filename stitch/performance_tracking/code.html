@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kinetic | Performance Tracking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-bright": "#393939",
+            "primary-fixed-dim": "#abd600",
+            "secondary-fixed": "#ffdad5",
+            "inverse-on-surface": "#313030",
+            "on-primary": "#283500",
+            "outline": "#8e9379",
+            "on-secondary-container": "#ffd2cc",
+            "on-error": "#690005",
+            "error-container": "#93000a",
+            "on-surface-variant": "#c4c9ac",
+            "primary-container": "#c3f400",
+            "background": "#131313",
+            "surface-container-highest": "#353534",
+            "surface": "#131313",
+            "tertiary": "#ffffff",
+            "surface-container": "#201f1f",
+            "primary-fixed": "#c3f400",
+            "on-tertiary-container": "#0060cc",
+            "surface-variant": "#353534",
+            "tertiary-container": "#d8e2ff",
+            "on-background": "#e5e2e1",
+            "inverse-surface": "#e5e2e1",
+            "on-secondary": "#690003",
+            "surface-tint": "#abd600",
+            "on-error-container": "#ffdad6",
+            "secondary-container": "#c5020b",
+            "on-secondary-fixed-variant": "#930005",
+            "error": "#ffb4ab",
+            "surface-container-lowest": "#0e0e0e",
+            "surface-dim": "#131313",
+            "tertiary-fixed-dim": "#adc6ff",
+            "on-primary-fixed": "#161e00",
+            "on-tertiary": "#002e69",
+            "on-primary-fixed-variant": "#3c4d00",
+            "on-tertiary-fixed-variant": "#004493",
+            "surface-container-low": "#1c1b1b",
+            "outline-variant": "#444933",
+            "on-primary-container": "#556d00",
+            "primary": "#ffffff",
+            "on-secondary-fixed": "#410001",
+            "secondary": "#ffb4aa",
+            "on-tertiary-fixed": "#001a41",
+            "surface-container-high": "#2a2a2a",
+            "on-surface": "#e5e2e1",
+            "secondary-fixed-dim": "#ffb4aa",
+            "inverse-primary": "#506600",
+            "tertiary-fixed": "#d8e2ff"
+          },
+          fontFamily: {
+            "headline": ["Lexend"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+    .glass-card {
+      background: rgba(57, 57, 57, 0.4);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .neon-glow {
+      text-shadow: 0 0 15px rgba(195, 244, 0, 0.4);
+    }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #131313; }
+    ::-webkit-scrollbar-thumb { background: #353534; border-radius: 10px; }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-[#131313] dark:bg-[#131313] fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 border-none">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#c3f400] cursor-pointer hover:opacity-80 transition-opacity" data-icon="menu">menu</span>
+<h1 class="font-['Lexend'] uppercase tracking-tighter font-black text-2xl text-[#c3f400]">KINETIC</h1>
+</div>
+<div class="w-10 h-10 rounded-xl overflow-hidden bg-surface-container active:scale-95 duration-100 cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="User athletic profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQUOL_bUQLdnvkW-KXgp3nnFAuRXplWLlOerQ8532_-bJXdK_6GRs4U-SivEehnza0eNlE1yDVAqCWhOsNvviYI_Pfbd92R0DkgZCW-OxI7Oex6X5aNpiH_sIY4i2EFrOt2LAbGb7xBJ6f4CRoU1hPVpoWZo5806udIfpvdzMwBBO66h2KAEniChswUkQQAfYTFqZNoDB5BtizpAb8mQ2T0ukfL7I5cUopq16duuMzkL87hEUfx3y4TVabQMqlaXntif1NoIrGWaqT"/>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Motivational Header Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="font-headline font-black text-primary-fixed uppercase tracking-widest text-sm mb-2 block">Performance Hub</span>
+<h2 class="font-headline font-black text-5xl md:text-7xl uppercase leading-[0.9] tracking-tighter max-w-2xl">
+            You're Crushing <span class="text-primary-fixed italic">Precision</span> Limits.
+          </h2>
+</div>
+<div class="glass-card p-6 rounded-xl border border-outline-variant/15 flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-fixed/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<div>
+<p class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant">Apple Health</p>
+<p class="font-headline font-bold text-sm uppercase">Synced &amp; Optimized</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Stats Overview -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Total Workout Time -->
+<div class="bg-surface-container-low p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-6 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl" data-icon="timer">timer</span>
+</div>
+<p class="font-headline font-bold uppercase text-xs tracking-[0.2em] text-on-surface-variant mb-4">Total Workout Time</p>
+<div class="flex items-baseline gap-2">
+<span class="font-headline font-black text-6xl text-primary-fixed neon-glow">42</span>
+<span class="font-headline font-bold text-xl uppercase text-on-surface-variant">Hours</span>
+</div>
+<p class="text-sm mt-4 text-primary-fixed-dim flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+          +12% from last week
+        </p>
+</div>
+<!-- Calories Burned -->
+<div class="bg-surface-container-low p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-6 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl" data-icon="local_fire_department">local_fire_department</span>
+</div>
+<p class="font-headline font-bold uppercase text-xs tracking-[0.2em] text-on-surface-variant mb-4">Calories Burned</p>
+<div class="flex items-baseline gap-2">
+<span class="font-headline font-black text-6xl text-secondary-container">18.4</span>
+<span class="font-headline font-bold text-xl uppercase text-on-surface-variant">KCAL</span>
+</div>
+<div class="mt-4 flex -space-x-2">
+<div class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></div>
+<div class="w-full h-1 bg-surface-variant rounded-full mt-0.5 ml-2 overflow-hidden">
+<div class="h-full bg-secondary-container w-3/4"></div>
+</div>
+</div>
+</div>
+<!-- Average Heart Rate -->
+<div class="bg-surface-container-low p-8 rounded-xl relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-6 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl" data-icon="monitor_heart">monitor_heart</span>
+</div>
+<p class="font-headline font-bold uppercase text-xs tracking-[0.2em] text-on-surface-variant mb-4">Avg. Heart Rate</p>
+<div class="flex items-baseline gap-2">
+<span class="font-headline font-black text-6xl text-tertiary-fixed-dim">142</span>
+<span class="font-headline font-bold text-xl uppercase text-on-surface-variant">BPM</span>
+</div>
+<p class="text-sm mt-4 text-on-surface-variant italic">Optimal Zone: HIIT Mode</p>
+</div>
+</section>
+<!-- Activity Chart Section -->
+<section class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-12">
+<div class="lg:col-span-3 bg-surface-container-low p-8 rounded-xl border border-outline-variant/10">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline font-black text-2xl uppercase tracking-tighter">Activity Velocity</h3>
+<div class="flex gap-2">
+<button class="px-4 py-1 rounded-lg bg-surface-container-high text-xs font-headline font-bold uppercase tracking-widest text-on-surface-variant">Weekly</button>
+<button class="px-4 py-1 rounded-lg bg-primary-fixed text-on-primary-fixed text-xs font-headline font-bold uppercase tracking-widest">Monthly</button>
+</div>
+</div>
+<!-- Mock Chart Visualization -->
+<div class="h-64 flex items-end justify-between gap-2 md:gap-4 px-2">
+<div class="w-full bg-surface-container-highest rounded-t-lg h-[40%] hover:bg-primary-fixed/40 transition-colors"></div>
+<div class="w-full bg-surface-container-highest rounded-t-lg h-[65%] hover:bg-primary-fixed/40 transition-colors"></div>
+<div class="w-full bg-primary-fixed rounded-t-lg h-[85%] relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-surface-bright px-2 py-1 rounded text-[10px] font-bold">1.2H</div>
+</div>
+<div class="w-full bg-surface-container-highest rounded-t-lg h-[55%] hover:bg-primary-fixed/40 transition-colors"></div>
+<div class="w-full bg-surface-container-highest rounded-t-lg h-[30%] hover:bg-primary-fixed/40 transition-colors"></div>
+<div class="w-full bg-primary-fixed rounded-t-lg h-[95%] relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-surface-bright px-2 py-1 rounded text-[10px] font-bold">1.5H</div>
+</div>
+<div class="w-full bg-surface-container-highest rounded-t-lg h-[50%] hover:bg-primary-fixed/40 transition-colors"></div>
+<div class="w-full bg-surface-container-highest rounded-t-lg h-[45%] hover:bg-primary-fixed/40 transition-colors"></div>
+<div class="w-full bg-surface-container-highest rounded-t-lg h-[60%] hover:bg-primary-fixed/40 transition-colors"></div>
+<div class="w-full bg-primary-fixed rounded-t-lg h-[75%]"></div>
+</div>
+<div class="flex justify-between mt-4 px-2 text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant">
+<span>Week 1</span>
+<span>Week 2</span>
+<span>Week 3</span>
+<span>Week 4</span>
+</div>
+</div>
+<!-- Side Card: Motivation -->
+<div class="bg-primary-fixed p-8 rounded-xl flex flex-col justify-between text-on-primary-fixed">
+<span class="material-symbols-outlined text-4xl" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<div>
+<h4 class="font-headline font-black text-3xl uppercase leading-none tracking-tighter mb-4">Elite Tier Approaching</h4>
+<p class="font-body font-medium text-sm leading-relaxed opacity-80">You've maintained an 85% heart-rate consistency for 12 days. Only 3 more sessions to reach Athlete Mode status.</p>
+</div>
+<button class="mt-6 w-full py-4 bg-on-primary-fixed text-primary-fixed font-headline font-black uppercase tracking-widest rounded-xl text-sm">Challenge Next</button>
+</div>
+</section>
+<!-- Recently Completed Workouts -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<h3 class="font-headline font-black text-3xl uppercase tracking-tighter">Recent Execution</h3>
+<span class="text-xs font-headline font-bold uppercase tracking-[0.2em] text-primary-fixed cursor-pointer">View Archive</span>
+</div>
+<div class="space-y-4">
+<!-- Workout Card 1 -->
+<div class="bg-surface-container flex items-center justify-between p-6 rounded-xl border-l-4 border-primary-fixed group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-6">
+<div class="hidden md:block w-16 h-16 rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Athlete performing kettlebell swings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX-ZU6f5HLlxBj6TfPY5-WHod76fWQbLAm49nq0C7hu_o4bcXDtPv46pBqtJdC2w88TRozgLARZn0LClS5__LzQEd3Pk_i9i8W_Qw8TEPzTcp6OZobatGSnV-PUm3UiTdMgtFlKFx83qg-5qZaadlHZh8qiy4sUOF6zpaB86YLpa3HeEf3zdNwaSmCduF08zi9Nk4Ra6wkTF3CJUUTRcObe42NSPY0nn_brzxzradY8XvDMa6dHLsjtp7L9aL2hnnZ1JG6Z6wCGdEN"/>
+</div>
+<div>
+<p class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant mb-1">Oct 24 • 08:30 AM</p>
+<h5 class="font-headline font-black text-xl uppercase tracking-tight">Vortex AMRAP: Phase IV</h5>
+<div class="flex gap-4 mt-1">
+<span class="text-[10px] font-bold uppercase px-2 py-0.5 bg-surface-container-highest rounded text-on-surface">Intensity: Elite</span>
+<span class="text-[10px] font-bold uppercase px-2 py-0.5 bg-surface-container-highest rounded text-on-surface">45 MIN</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-black text-2xl text-primary-fixed">640</p>
+<p class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant">KCAL</p>
+</div>
+</div>
+<!-- Workout Card 2 -->
+<div class="bg-surface-container flex items-center justify-between p-6 rounded-xl border-l-4 border-secondary-container group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-6">
+<div class="hidden md:block w-16 h-16 rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Athlete sprinting on treadmill" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1AGRdgPS1nnDh0Md0-USWCw-1HxO8uZ4RAwLTgK2rKGr88mzk0J08zaf3myJQD9bD6CPBCgyZdW6X7kX0qbIpc_bo5d28fAipZh3jr4MMTepMYw69o-F8lDgmWCD1pBBhG7t4pPlepbN1Yicq-DaNhUyre3FvZyJ978O65hCIqMWt25dn44POncbgkf6G0y4X5vCd0VeV-Zc1Wl_ApPNaWvLWVLXp5u-ZRFJxCus-e5HVcM6-jshBtJjeaK-MtOVhmr_lli90G-8Z"/>
+</div>
+<div>
+<p class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant mb-1">Oct 22 • 06:15 PM</p>
+<h5 class="font-headline font-black text-xl uppercase tracking-tight">Kinetic Sprint Blocks</h5>
+<div class="flex gap-4 mt-1">
+<span class="text-[10px] font-bold uppercase px-2 py-0.5 bg-surface-container-highest rounded text-on-surface">Intensity: High</span>
+<span class="text-[10px] font-bold uppercase px-2 py-0.5 bg-surface-container-highest rounded text-on-surface">30 MIN</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-black text-2xl text-secondary-container">412</p>
+<p class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant">KCAL</p>
+</div>
+</div>
+<!-- Workout Card 3 -->
+<div class="bg-surface-container flex items-center justify-between p-6 rounded-xl border-l-4 border-tertiary-fixed-dim group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-6">
+<div class="hidden md:block w-16 h-16 rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all">
+<img class="w-full h-full object-cover" data-alt="Athlete during yoga recovery stretch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFYy1tYM2B37r30N7SjSlm4RbwkqkQ1MG_hnzJUvTY_LdIv7QaT_aSzPlEsUOYg-YJFk48KQkFCT3kVzrky1ujuE79ww6f2DR4rrM_O625BvpCamm3uz2KPOIAIADcwXgTM71AR4RmsWWyOUXffdviyABoxMz4rOmTKzAbucHbKlMwwW7JhXy25WWxkssyn1ojXQdoyrl4zPiKJFOGrqAEkMdCliA99Gh_mgbQrlbw--c3_2eUi1u1UiRkm9T-bcmMCyBbOjIuNzaV"/>
+</div>
+<div>
+<p class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant mb-1">Oct 21 • 07:00 AM</p>
+<h5 class="font-headline font-black text-xl uppercase tracking-tight">Flow &amp; Restore Level 2</h5>
+<div class="flex gap-4 mt-1">
+<span class="text-[10px] font-bold uppercase px-2 py-0.5 bg-surface-container-highest rounded text-on-surface">Intensity: Recovery</span>
+<span class="text-[10px] font-bold uppercase px-2 py-0.5 bg-surface-container-highest rounded text-on-surface">20 MIN</span>
+</div>
+</div>
+</div>
+<div class="text-right">
+<p class="font-headline font-black text-2xl text-tertiary-fixed-dim">120</p>
+<p class="text-[10px] font-headline font-bold uppercase tracking-widest text-on-surface-variant">KCAL</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#131313]/90 dark:bg-[#131313]/90 backdrop-blur-xl z-50 border-t border-[#e5e2e1]/15">
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 hover:text-[#c3f400] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="bolt">bolt</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 hover:text-[#c3f400] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="add_box">add_box</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase">Build</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#c3f400] bg-[#c3f400]/10 rounded-xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="leaderboard" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 hover:text-[#c3f400] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase">Settings</span>
+</a>
+</nav>
+</body></html>

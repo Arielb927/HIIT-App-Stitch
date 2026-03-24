@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "outline": "#8e9379",
+            "error": "#ffb4ab",
+            "primary-container": "#c3f400",
+            "inverse-primary": "#506600",
+            "surface-tint": "#abd600",
+            "background": "#131313",
+            "secondary-fixed-dim": "#ffb4aa",
+            "on-primary-container": "#556d00",
+            "primary": "#ffffff",
+            "on-background": "#e5e2e1",
+            "on-error": "#690005",
+            "on-primary": "#283500",
+            "on-tertiary-fixed-variant": "#004493",
+            "surface-variant": "#353534",
+            "surface-container-highest": "#353534",
+            "tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#930005",
+            "inverse-on-surface": "#313030",
+            "primary-fixed": "#c3f400",
+            "surface-bright": "#393939",
+            "tertiary-fixed": "#d8e2ff",
+            "on-primary-fixed": "#161e00",
+            "secondary-fixed": "#ffdad5",
+            "outline-variant": "#444933",
+            "secondary": "#ffb4aa",
+            "on-secondary-container": "#ffd2cc",
+            "on-tertiary": "#002e69",
+            "on-primary-fixed-variant": "#3c4d00",
+            "on-tertiary-fixed": "#001a41",
+            "tertiary-container": "#d8e2ff",
+            "surface-container-high": "#2a2a2a",
+            "surface-container-low": "#1c1b1b",
+            "surface-container": "#201f1f",
+            "secondary-container": "#c5020b",
+            "on-error-container": "#ffdad6",
+            "on-secondary": "#690003",
+            "error-container": "#93000a",
+            "primary-fixed-dim": "#abd600",
+            "tertiary-fixed-dim": "#adc6ff",
+            "surface": "#131313",
+            "inverse-surface": "#e5e2e1",
+            "on-surface-variant": "#c4c9ac",
+            "surface-dim": "#131313",
+            "surface-container-lowest": "#0e0e0e",
+            "on-surface": "#e5e2e1",
+            "on-secondary-fixed": "#410001",
+            "on-tertiary-container": "#0060cc"
+          },
+          fontFamily: {
+            "headline": ["Lexend"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .neon-glow {
+      text-shadow: 0 0 20px rgba(195, 244, 0, 0.4);
+    }
+    .glass-panel {
+      background: rgba(57, 57, 57, 0.6);
+      backdrop-filter: blur(20px);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar (Suppressed per shell visibility rules for transactional/onboarding flows, but here for brand identity if required as a header) -->
+<header class="bg-[#131313] flex justify-between items-center w-full px-6 py-6 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#e5e2e1] cursor-pointer active:scale-95 transition-transform">arrow_back</span>
+<h1 class="font-lexend tracking-tight uppercase font-bold text-2xl italic text-[#c3f400] tracking-tighter">Pulse Sync</h1>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/20">
+<img alt="User profile" data-alt="Close up profile picture of an athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD68c1KZdvdRR2Yg4VoDcG8sl9IPMjgmLOXmV2cF4zPJZqrdYtmXnpO-DD9Uk7xaq1vGLGnejghM-Xw3XDM4G90uuNjvjXvTwMYghI3OibHmCuilDjnGilwhlHp2QDd9xtu0ujNqvBbujZyk73IvEzBzZV2zOkCq7TqR5Vn4ya9u7JtaIz3e-9ABguAGY0McF9wgMRoTCk1U0XpX9G2hvA7DzFDsRMQhjwGrNlQVnvSx9Fg-zDTSBSmMejGhtrLF2MKwVGNlATaFOJb"/>
+</div>
+</header>
+<main class="min-h-[calc(100vh-88px)] flex flex-col items-center justify-center px-6 pb-20 overflow-x-hidden">
+<!-- Hero Section: Spotify Brand Lockup -->
+<section class="w-full max-w-md flex flex-col items-center text-center mb-12">
+<div class="relative mb-8">
+<!-- Abstract Glow Background -->
+<div class="absolute inset-0 bg-primary-fixed/20 blur-[80px] rounded-full scale-150"></div>
+<!-- Brand Icons Intersection -->
+<div class="relative flex items-center justify-center gap-6">
+<div class="w-24 h-24 bg-surface-container-high rounded-xl flex items-center justify-center border border-primary-fixed/30 shadow-2xl">
+<span class="material-symbols-outlined text-primary-fixed text-5xl font-black italic">bolt</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-3xl">add</span>
+<div class="w-24 h-24 bg-[#1DB954] rounded-xl flex items-center justify-center shadow-2xl">
+<svg class="w-14 h-14 text-white" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.22.36-.68.48-1.04.26-2.88-1.76-6.51-2.16-10.79-.18-.41.19-.89-.02-1.08-.42-.19-.41.02-.89.42-1.08 4.69-2.14 8.7-1.68 11.91.28.36.22.48.68.58 1.14zM18.91 14.1c-.28.45-.87.59-1.32.31-3.29-2.02-8.31-2.61-12.2-1.43-.51.15-1.05-.14-1.2-.65-.15-.51.14-1.05.65-1.2 4.45-1.35 10.01-.69 13.76 1.62.45.28.59.87.31 1.35zm.16-3.32C15.21 8.5 9.07 8.3 5.53 9.38c-.59.18-1.22-.16-1.4-.75-.18-.59.16-1.22.75-1.4 4.07-1.23 10.86-1.01 15.35 1.66.53.31.71 1 .4 1.53-.31.53-1 .71-1.53.4z"></path>
+</svg>
+</div>
+</div>
+</div>
+<h2 class="font-headline text-4xl font-extrabold uppercase tracking-tighter mb-4 neon-glow">Connect Spotify</h2>
+<p class="font-body text-on-surface-variant text-lg max-w-xs">Sync your performance pulse with the world's most powerful audio engine.</p>
+</section>
+<!-- Bento Grid Benefits -->
+<section class="w-full max-w-2xl grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+<!-- BPM Matching -->
+<div class="surface-container-low p-6 rounded-xl border border-outline-variant/10 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">speed</span>
+</div>
+<div class="flex flex-col h-full justify-between">
+<div>
+<span class="material-symbols-outlined text-primary-fixed mb-3" style="font-variation-settings: 'FILL' 1;">speed</span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-tight text-primary">BPM Matching</h3>
+</div>
+<p class="text-on-surface-variant text-sm mt-2">Algorithms shift your playback to match your heart rate zones automatically.</p>
+</div>
+</div>
+<!-- Phase-specific Playlists -->
+<div class="surface-container-low p-6 rounded-xl border border-outline-variant/10 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">reorder</span>
+</div>
+<div class="flex flex-col h-full justify-between">
+<div>
+<span class="material-symbols-outlined text-tertiary-fixed-dim mb-3" style="font-variation-settings: 'FILL' 1;">reorder</span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-tight text-primary">Phase Playlists</h3>
+</div>
+<p class="text-on-surface-variant text-sm mt-2">Dynamic transitions between heavy work intervals and restorative rest phases.</p>
+</div>
+</div>
+</section>
+<!-- Permissions List -->
+<section class="w-full max-w-md glass-panel p-8 rounded-xl border border-outline-variant/20 mb-10">
+<h4 class="font-headline text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-6 text-center">Data Permissions</h4>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-xl">check_circle</span>
+<div>
+<span class="font-bold text-sm block">Stream Playback</span>
+<p class="text-xs text-on-surface-variant">Control music playback and skip tracks within the app.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-xl">check_circle</span>
+<div>
+<span class="font-bold text-sm block">Library Access</span>
+<p class="text-xs text-on-surface-variant">Access your playlists and followed artists for personalized sessions.</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-fixed text-xl">check_circle</span>
+<div>
+<span class="font-bold text-sm block">Playback State</span>
+<p class="text-xs text-on-surface-variant">Read what you are playing to sync HIIT visualizers.</p>
+</div>
+</li>
+</ul>
+</section>
+<!-- CTA Button -->
+<div class="w-full max-w-md space-y-4">
+<button class="w-full h-16 bg-primary-fixed text-on-primary-fixed rounded-xl font-headline font-black uppercase tracking-widest text-lg flex items-center justify-center gap-3 active:scale-[0.98] transition-all hover:shadow-[0_0_30px_rgba(195,244,0,0.3)]">
+        Connect Spotify
+        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="w-full h-12 bg-transparent text-on-surface-variant rounded-xl font-headline font-bold uppercase tracking-tighter text-sm flex items-center justify-center active:opacity-60 transition-opacity">
+        Maybe Later
+      </button>
+</div>
+</main>
+<!-- Bottom Navigation (Suppressed per shell visibility rules for transactional screens) -->
+<!-- We prioritize the transactional focus of connecting an account -->
+<!-- Decoration Elements -->
+<div class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-fixed/50 to-transparent"></div>
+<div class="fixed top-20 -left-20 w-64 h-64 bg-secondary-container/10 blur-[100px] rounded-full"></div>
+<div class="fixed bottom-20 -right-20 w-64 h-64 bg-tertiary-fixed-dim/10 blur-[100px] rounded-full"></div>
+</body></html>

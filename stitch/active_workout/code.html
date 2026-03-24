@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC - Active Workout</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#393939",
+              "primary-fixed-dim": "#abd600",
+              "secondary-fixed": "#ffdad5",
+              "inverse-on-surface": "#313030",
+              "on-primary": "#283500",
+              "outline": "#8e9379",
+              "on-secondary-container": "#ffd2cc",
+              "on-error": "#690005",
+              "error-container": "#93000a",
+              "on-surface-variant": "#c4c9ac",
+              "primary-container": "#c3f400",
+              "background": "#131313",
+              "surface-container-highest": "#353534",
+              "surface": "#131313",
+              "tertiary": "#ffffff",
+              "surface-container": "#201f1f",
+              "primary-fixed": "#c3f400",
+              "on-tertiary-container": "#0060cc",
+              "surface-variant": "#353534",
+              "tertiary-container": "#d8e2ff",
+              "on-background": "#e5e2e1",
+              "inverse-surface": "#e5e2e1",
+              "on-secondary": "#690003",
+              "surface-tint": "#abd600",
+              "on-error-container": "#ffdad6",
+              "secondary-container": "#c5020b",
+              "on-secondary-fixed-variant": "#930005",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-dim": "#131313",
+              "tertiary-fixed-dim": "#adc6ff",
+              "on-primary-fixed": "#161e00",
+              "on-tertiary": "#002e69",
+              "on-primary-fixed-variant": "#3c4d00",
+              "on-tertiary-fixed-variant": "#004493",
+              "surface-container-low": "#1c1b1b",
+              "outline-variant": "#444933",
+              "on-primary-container": "#556d00",
+              "primary": "#ffffff",
+              "on-secondary-fixed": "#410001",
+              "secondary": "#ffb4aa",
+              "on-tertiary-fixed": "#001a41",
+              "surface-container-high": "#2a2a2a",
+              "on-surface": "#e5e2e1",
+              "secondary-fixed-dim": "#ffb4aa",
+              "inverse-primary": "#506600",
+              "tertiary-fixed": "#d8e2ff"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .text-glow {
+        text-shadow: 0 0 25px rgba(195, 244, 0, 0.4);
+      }
+      .immersion-bg {
+        background: radial-gradient(circle at center, #c3f400 0%, #161e00 100%);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body overflow-hidden">
+<!-- TopAppBar Fragment -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#131313] flex justify-between items-center px-6 h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#c3f400]">menu</span>
+<h1 class="font-['Lexend'] uppercase tracking-tighter font-black text-2xl text-[#c3f400]">KINETIC</h1>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="User athletic profile photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWG3-yFvNwACNrA0qkZafNb1a_dZC52nyJKqvbw4RbyNaqPb3jyqS89QGfIUsovoWTrZe_MQ5N3QsJ8CQePM3_aI6lawFPOPn9x4H2pKu5_AlgihqNAOmrn5vBgzmLHewdqU_cJD9rpOK2gG8lRD-CXxjwITgwoO3xA4jBdtNwva9ycCGL0aWDN34_Fyei5_wd_Ye1bw7eBl5TcL08p8FOnsArZwxLXB1jrtDIJ0MTdW0gYt3BhWvb2VW8V-0iIRcnllw4wvPpsacT"/>
+</div>
+</header>
+<!-- Main Content: Immersion Canvas -->
+<main class="relative h-screen w-full flex flex-col items-center justify-center pt-16 pb-32 overflow-hidden">
+<!-- Background Immersion Glow -->
+<div class="absolute inset-0 z-0 opacity-20 immersion-bg"></div>
+<!-- Workout Status Header -->
+<div class="z-10 text-center mb-8">
+<span class="font-headline font-black text-6xl text-[#c3f400] uppercase tracking-tighter italic">WORK</span>
+<p class="font-label text-sm tracking-widest text-[#e5e2e1]/60 uppercase mt-2">BATTLE ROPES INTERVAL</p>
+</div>
+<!-- Massive Timer & Progress Ring Cluster -->
+<div class="relative z-10 flex items-center justify-center w-full max-w-lg aspect-square">
+<!-- Progress Ring (SVG) -->
+<svg class="absolute w-full h-full -rotate-90 transform" viewbox="0 0 100 100">
+<!-- Track -->
+<circle cx="50" cy="50" fill="transparent" r="46" stroke="#1c1b1b" stroke-width="6"></circle>
+<!-- Active Stroke -->
+<circle class="drop-shadow-[0_0_15px_rgba(195,244,0,0.6)]" cx="50" cy="50" fill="transparent" r="46" stroke="#c3f400" stroke-dasharray="289" stroke-dashoffset="72" stroke-linecap="round" stroke-width="6"></circle>
+</svg>
+<!-- Countdown Text -->
+<div class="flex flex-col items-center">
+<span class="font-headline font-black text-[8rem] md:text-[12rem] leading-none text-[#c3f400] text-glow select-none">
+                    00:45
+                </span>
+<div class="flex gap-12 mt-4">
+<div class="text-center">
+<span class="block font-headline font-bold text-2xl text-[#e5e2e1]">162</span>
+<span class="text-[10px] uppercase font-bold text-[#e5e2e1]/40">BPM</span>
+</div>
+<div class="text-center">
+<span class="block font-headline font-bold text-2xl text-[#e5e2e1]">420</span>
+<span class="text-[10px] uppercase font-bold text-[#e5e2e1]/40">KCAL</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Next Up Reveal -->
+<div class="z-10 mt-16 text-center">
+<div class="bg-surface-container-low px-8 py-3 rounded-full border border-outline-variant/10 backdrop-blur-md">
+<span class="font-label text-[10px] font-black uppercase text-[#e5e2e1]/40 tracking-[0.2em] mr-2">Up Next:</span>
+<span class="font-headline font-bold text-lg text-secondary">REST - 15S</span>
+</div>
+</div>
+<!-- Performance Actions -->
+<div class="fixed bottom-36 w-full px-6 z-20 flex gap-4 max-w-md">
+<button class="flex-1 bg-surface-container-high text-on-surface font-headline font-black py-5 rounded-xl uppercase tracking-widest active:scale-95 transition-all">
+                PAUSE
+            </button>
+<button class="flex-1 bg-secondary-container text-on-secondary-container font-headline font-black py-5 rounded-xl uppercase tracking-widest active:scale-95 transition-all">
+                STOP
+            </button>
+</div>
+<!-- Music Integration (Glassmorphic Tray) -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] max-w-md z-30 bg-surface-bright/60 backdrop-blur-2xl rounded-xl p-4 flex items-center gap-4 shadow-2xl border border-white/5">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Heavy metal album cover art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGyqfHMSnputwbJu30lH_UvQjColZOWhdTvj2OlULLIBMeicxe0MwWVnX5EShUH4wb5ChsUt4ljXP_TBODQ-04K-kydW2-eEFfx794_ZrZtMokOC9OhKtBIvKjb-Q55RnJoQhShajbj_9trTOL_BCx_1D_EOrIiQPE6iQSC17QrFjBJwkf7L2nbBsHlxt-iGnHh8awd6E6jfqQXLzQvIyyrCddxn1Vo-64GFKJZQxCqJvsK84xaNm_ABiwBMpz_YVJko-GXEiKPIyY"/>
+</div>
+<div class="flex-grow overflow-hidden">
+<h4 class="font-headline text-sm font-bold truncate text-[#e5e2e1]">PHANTOM POWER</h4>
+<p class="font-label text-[10px] text-tertiary-fixed-dim uppercase tracking-wider">HARDCORE REMIX 2024</p>
+</div>
+<div class="flex items-center gap-4 text-tertiary-fixed-dim">
+<span class="material-symbols-outlined text-2xl cursor-pointer hover:opacity-80">skip_previous</span>
+<span class="material-symbols-outlined text-4xl cursor-pointer hover:opacity-80" style="font-variation-settings: 'FILL' 1;">pause_circle</span>
+<span class="material-symbols-outlined text-2xl cursor-pointer hover:opacity-80">skip_next</span>
+</div>
+</div>
+</main>
+<!-- Suppressed BottomNavBar & SideNav as per Focused Journey Rule -->
+</body></html>

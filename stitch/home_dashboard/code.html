@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KINETIC | High-Intensity Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Lexend:wght@700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-bright": "#393939",
+              "primary-fixed-dim": "#abd600",
+              "secondary-fixed": "#ffdad5",
+              "inverse-on-surface": "#313030",
+              "on-primary": "#283500",
+              "outline": "#8e9379",
+              "on-secondary-container": "#ffd2cc",
+              "on-error": "#690005",
+              "error-container": "#93000a",
+              "on-surface-variant": "#c4c9ac",
+              "primary-container": "#c3f400",
+              "background": "#131313",
+              "surface-container-highest": "#353534",
+              "surface": "#131313",
+              "tertiary": "#ffffff",
+              "surface-container": "#201f1f",
+              "primary-fixed": "#c3f400",
+              "on-tertiary-container": "#0060cc",
+              "surface-variant": "#353534",
+              "tertiary-container": "#d8e2ff",
+              "on-background": "#e5e2e1",
+              "inverse-surface": "#e5e2e1",
+              "on-secondary": "#690003",
+              "surface-tint": "#abd600",
+              "on-error-container": "#ffdad6",
+              "secondary-container": "#c5020b",
+              "on-secondary-fixed-variant": "#930005",
+              "error": "#ffb4ab",
+              "surface-container-lowest": "#0e0e0e",
+              "surface-dim": "#131313",
+              "tertiary-fixed-dim": "#adc6ff",
+              "on-primary-fixed": "#161e00",
+              "on-tertiary": "#002e69",
+              "on-primary-fixed-variant": "#3c4d00",
+              "on-tertiary-fixed-variant": "#004493",
+              "surface-container-low": "#1c1b1b",
+              "outline-variant": "#444933",
+              "on-primary-container": "#556d00",
+              "primary": "#ffffff",
+              "on-secondary-fixed": "#410001",
+              "secondary": "#ffb4aa",
+              "on-tertiary-fixed": "#001a41",
+              "surface-container-high": "#2a2a2a",
+              "on-surface": "#e5e2e1",
+              "secondary-fixed-dim": "#ffb4aa",
+              "inverse-primary": "#506600",
+              "tertiary-fixed": "#d8e2ff"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glow-primary {
+            text-shadow: 0 0 20px rgba(195, 244, 0, 0.4);
+        }
+        .glass-panel {
+            background: rgba(57, 57, 57, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-[#131313] dark:bg-[#131313] flex justify-between items-center w-full px-6 h-16 docked full-width top-0 sticky z-50 border-none">
+<div class="flex items-center gap-4">
+<button class="text-[#e5e2e1] hover:opacity-80 transition-opacity active:scale-95 duration-100">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-['Lexend'] uppercase tracking-tighter font-black text-2xl text-[#c3f400] glow-primary">KINETIC</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-xl overflow-hidden bg-surface-container-high flex items-center justify-center border border-outline-variant/20 hover:opacity-80 transition-opacity cursor-pointer">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="Close up portrait of a determined athlete" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSl4CEBHXTTfIAuL-9YQEbTBquhh_y5henc3OgfXHavQPxu84JfPd0QFkxlqhTrJGHMbn0wr0usb6cKgE3qbbFDrhn558YcHeVONmDpErUa8dJmHEvqSJpJVSQ49BgmOLDUSk8UswABfMBVQ2rf7ZjIU27XGWMUkaFCU85aLHhLVeeyxXnF7TO9VLBe8uASclW0zVTd994O1R1iKtZVf5rtbySZJW0FU2PlK2PJsUNoDbfXLNcTiNvIaWrfQIVTq54MHrZLDBvYVOH"/>
+</div>
+</div>
+</header>
+<main class="pb-32 pt-6 px-6 max-w-5xl mx-auto space-y-10">
+<!-- Quick Start Section -->
+<section class="relative group">
+<div class="absolute -inset-1 bg-primary-fixed/20 rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative bg-surface-container-low rounded-xl overflow-hidden min-h-[16rem] flex flex-col justify-end p-8 border border-outline-variant/10 shadow-2xl shadow-primary-fixed/5">
+<div class="absolute top-0 right-0 p-8">
+<span class="material-symbols-outlined text-primary-fixed text-6xl opacity-20">bolt</span>
+</div>
+<div class="space-y-4 max-w-lg">
+<span class="font-headline text-primary-fixed uppercase tracking-widest text-sm font-black">Ready for chaos?</span>
+<h2 class="font-headline text-5xl md:text-6xl font-black uppercase tracking-tighter leading-none italic">Quick Start: Auto-HIIT</h2>
+<p class="text-on-surface-variant font-medium max-w-xs">AI-generated randomization based on your fatigue levels and goals.</p>
+</div>
+<div class="mt-8">
+<button class="bg-primary-fixed text-on-primary-fixed font-headline font-black py-5 px-10 rounded-xl text-xl uppercase flex items-center gap-3 hover:scale-[1.02] active:scale-95 transition-all shadow-lg shadow-primary-fixed/20">
+                        Launch Session
+                        <span class="material-symbols-outlined font-black">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Stats & Consistency Bento -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Weekly Consistency Rings -->
+<div class="md:col-span-2 bg-surface-container rounded-xl p-8 flex flex-col justify-between border border-outline-variant/15">
+<div class="flex justify-between items-start mb-8">
+<div>
+<h3 class="font-headline font-black uppercase tracking-tight text-xl">Weekly Pulse</h3>
+<p class="text-on-surface-variant text-sm">4 Day Streak / 1,200 CAL</p>
+</div>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+<span class="w-2 h-2 rounded-full bg-surface-container-highest"></span>
+</div>
+</div>
+<div class="flex items-center justify-around gap-4 flex-wrap">
+<!-- Progress Ring -->
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="54" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary-fixed" cx="64" cy="64" fill="transparent" r="54" stroke="currentColor" stroke-dasharray="339.292" stroke-dashoffset="84" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline font-black text-2xl">75%</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Daily</span>
+</div>
+</div>
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="54" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-secondary-container" cx="64" cy="64" fill="transparent" r="54" stroke="currentColor" stroke-dasharray="339.292" stroke-dashoffset="200" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline font-black text-2xl">40%</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Intensity</span>
+</div>
+</div>
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="54" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-tertiary-fixed-dim" cx="64" cy="64" fill="transparent" r="54" stroke="currentColor" stroke-dasharray="339.292" stroke-dashoffset="150" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline font-black text-2xl">62%</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Volume</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Heart Rate Monitor Card -->
+<div class="bg-secondary-container rounded-xl p-8 flex flex-col justify-between border border-on-secondary/10 overflow-hidden relative">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-on-secondary-container animate-pulse">favorite</span>
+<h3 class="font-headline font-black uppercase text-on-secondary-container">Avg HR</h3>
+</div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline font-black text-6xl text-on-secondary-container">142</span>
+<span class="font-headline font-bold text-on-secondary-container/60">BPM</span>
+</div>
+</div>
+<!-- Mini Sparkline Graph -->
+<div class="absolute bottom-0 left-0 w-full h-24 opacity-30">
+<svg class="w-full h-full preserve-3d" preserveaspectratio="none" viewbox="0 0 100 40">
+<path class="text-on-secondary-container" d="M0 40 L0 35 L10 20 L20 30 L30 10 L40 25 L50 15 L60 30 L70 5 L80 20 L90 10 L100 25 L100 40 Z" fill="currentColor"></path>
+</svg>
+</div>
+</div>
+</section>
+<!-- Recent Routines -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="font-headline font-black uppercase tracking-tight text-2xl">Recent Routine</h3>
+<button class="text-primary-fixed font-bold uppercase text-xs tracking-widest hover:underline">View All History</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/15 hover:bg-surface-container transition-colors cursor-pointer relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+</div>
+<span class="font-headline font-black text-on-surface-variant/20 text-4xl italic uppercase">01</span>
+</div>
+<div class="mt-8 relative z-10">
+<h4 class="font-headline font-black text-xl uppercase tracking-tight group-hover:text-primary-fixed transition-colors">Leg Day Burn</h4>
+<div class="flex items-center gap-4 mt-2">
+<span class="flex items-center gap-1 text-on-surface-variant font-bold text-xs uppercase">
+<span class="material-symbols-outlined text-sm">schedule</span> 45 MIN
+                            </span>
+<span class="flex items-center gap-1 text-on-surface-variant font-bold text-xs uppercase">
+<span class="material-symbols-outlined text-sm">local_fire_department</span> 520 KCAL
+                            </span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/15 hover:bg-surface-container transition-colors cursor-pointer relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">timer</span>
+</div>
+<span class="font-headline font-black text-on-surface-variant/20 text-4xl italic uppercase">02</span>
+</div>
+<div class="mt-8 relative z-10">
+<h4 class="font-headline font-black text-xl uppercase tracking-tight group-hover:text-primary-fixed transition-colors">Core Blast</h4>
+<div class="flex items-center gap-4 mt-2">
+<span class="flex items-center gap-1 text-on-surface-variant font-bold text-xs uppercase">
+<span class="material-symbols-outlined text-sm">schedule</span> 20 MIN
+                            </span>
+<span class="flex items-center gap-1 text-on-surface-variant font-bold text-xs uppercase">
+<span class="material-symbols-outlined text-sm">local_fire_department</span> 210 KCAL
+                            </span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-low rounded-xl p-6 border border-outline-variant/15 hover:bg-surface-container transition-colors cursor-pointer relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">electric_bolt</span>
+</div>
+<span class="font-headline font-black text-on-surface-variant/20 text-4xl italic uppercase">03</span>
+</div>
+<div class="mt-8 relative z-10">
+<h4 class="font-headline font-black text-xl uppercase tracking-tight group-hover:text-primary-fixed transition-colors">Full Body AMP</h4>
+<div class="flex items-center gap-4 mt-2">
+<span class="flex items-center gap-1 text-on-surface-variant font-bold text-xs uppercase">
+<span class="material-symbols-outlined text-sm">schedule</span> 35 MIN
+                            </span>
+<span class="flex items-center gap-1 text-on-surface-variant font-bold text-xs uppercase">
+<span class="material-symbols-outlined text-sm">local_fire_department</span> 430 KCAL
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#131313]/90 dark:bg-[#131313]/90 backdrop-blur-xl z-50 border-t border-[#e5e2e1]/15 shadow-[0_-4px_20px_rgba(195,244,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-[#c3f400] bg-[#c3f400]/10 rounded-xl px-4 py-1 active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 hover:text-[#c3f400] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">add_box</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase mt-1">Build</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 hover:text-[#c3f400] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#e5e2e1]/60 hover:text-[#c3f400] transition-colors active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Lexend'] text-[10px] font-bold uppercase mt-1">Settings</span>
+</a>
+</nav>
+<!-- Floating Music Integration -->
+<div class="fixed bottom-24 right-6 left-6 md:right-10 md:left-auto md:w-80 glass-panel rounded-xl p-4 flex items-center gap-4 border border-outline-variant/20 shadow-2xl">
+<div class="w-12 h-12 rounded-lg overflow-hidden bg-surface-container-highest">
+<img alt="Music Cover" class="w-full h-full object-cover" data-alt="Album art for a high-energy electronic music track" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmKdD6rV7yt9Zt9fBK6wKSNUKjibeEUv4VeGZwwEPQWWcJIMhULD1-ADxM1Ut-bUF5uuKeQpL0p-zySJheaTd6kknZ3cUQrdbtWaTxl4nCDK7P2UC4ysjg-1uPjN-NKGurnOoi1oqqxn3IEcB_x8e2vDpFvKNhIcl2Id0swpA0QWfLduKC1WZk2e8inbNh_2HOYiXBxY7GPdjRYHH5e4vZPjsFEVKWoMjXLSkH2PoUKlC1qSns7FQ_YWDFLtaau9_GmsnHLIjnH6Wp"/>
+</div>
+<div class="flex-1 overflow-hidden">
+<h5 class="font-headline text-xs font-black uppercase truncate tracking-tight">Vibrance (Remix)</h5>
+<p class="text-[10px] text-tertiary-fixed-dim uppercase font-bold truncate">HIIT Power Mix - Spotify</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-tertiary-fixed-dim hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">skip_previous</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-tertiary-fixed-dim text-on-tertiary-fixed flex items-center justify-center hover:scale-110 transition-transform shadow-lg shadow-tertiary-fixed-dim/20">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<button class="text-tertiary-fixed-dim hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">skip_next</span>
+</button>
+</div>
+</div>
+</body></html>
