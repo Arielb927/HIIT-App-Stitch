@@ -147,7 +147,7 @@ class WorkoutSession extends _$WorkoutSession {
   Future<void> _startLiveActivity(WorkoutSessionState session) async {
     try {
       _liveActivityId = await _liveActivitiesPlugin.createActivity(
-        data: _liveActivityData(session),
+        _liveActivityData(session),
       );
     } catch (_) {
       _liveActivityId = null;
