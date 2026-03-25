@@ -32,15 +32,6 @@ target 'Runner' do
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 
-target 'LiveActivityExtension' do
-  use_frameworks!
-  use_modular_headers!
-
-  # The extension only needs ActivityKit (system framework), no extra pods.
-  # If live_activities plugin requires a helper pod here, add it:
-  # pod 'live_activities', :path => '.symlinks/plugins/live_activities/ios'
-end
-
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
