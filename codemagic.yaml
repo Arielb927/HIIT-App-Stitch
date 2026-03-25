@@ -30,7 +30,8 @@ workflows:
           flutter build ios --release --no-codesign --config-only
       - name: Build unsigned Runner.app
         script: |
-          xcodebuild -workspace ios/Runner.xcworkspace -scheme Runner -configuration Release -sdk iphoneos -destination generic/platform=iOS CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" build
+          set -o pipefail
+          xcodebuild -workspace ios/Runner.xcworkspace -scheme Runner -configuration Release -sdk iphoneos -destination generic/platform=iOS CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" build | tee build/ios/xcodebuild.log
       - name: Package unsigned IPA
         script: |
           mkdir -p build/ios/ipa/Payload
@@ -40,3 +41,4 @@ workflows:
     artifacts:
       - build/ios/ipa/app-unsigned.ipa
       - build/ios/iphoneos/Runner.app/**
+      - build/ios/xcodebuild.log
